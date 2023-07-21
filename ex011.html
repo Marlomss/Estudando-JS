@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        body{
+            background-color: black;
+            color:aquamarine;
+            font: Times 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>PAÍS</h1>
+    Qual o seu país de origem?<input type="String" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="comparar()">
+    <div id="res"></div>
+    <script>
+
+        function comparar(){
+        var pid = window.document.getElementById('txtp')
+        var p = (txtp.value)
+        res.innerHTML = `<p>O seu país é ${p}</p>`
+        if(p != 'Brasil'){
+            res.innerHTML += `<p>Você é estrangeiro</p>` 
+        }else{
+            res.innerHTML += `<p>Você é brasileiro</p>`
+        }
+        
+        }
+    </script>
+
+</body>
+</html>
